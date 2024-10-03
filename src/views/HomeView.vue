@@ -18,6 +18,18 @@ const screenWidth = computed(() => {
 const screenHeight = computed(() => {
     return screen.height;
 });
+const outerWidth = computed(() => {
+    return window.outerWidth;
+});
+const outerHeight = computed(() => {
+    return window.outerHeight;
+});
+const innerWidth = computed(() => {
+    return window.innerWidth;
+});
+const innerHeight = computed(() => {
+    return window.innerHeight;
+});
 
 const { width, height } = useWindowSize()
 
@@ -29,10 +41,10 @@ const { width, height } = useWindowSize()
       Screen size: {{ screenWidth }} &#215; {{ screenHeight }}
     </p>
     <p>
-      Window size: {{ width }} &#215; {{ height }}
+      Outer window: {{ outerWidth }} &#215; {{ outerHeight }}
     </p>
     <p>
-
+      Inner window: {{ innerWidth }} &#215; {{ innerHeight }}
     </p>
     <p>
       Orientation type: {{ orientation }}
